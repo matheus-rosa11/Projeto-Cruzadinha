@@ -4,14 +4,46 @@
 
 body {
     margin: 0;
+    background-color: black;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    padding: 10px;
+}
+
+.container-box {
+    display: flex;
+    width: 1000px;
+    height: 940px;
+    background-color: rgba(204, 204, 204, 0.869);
+    border-radius: 20px;
+    box-shadow: 10px 20px 18px grey;
 }
 
 
 .cruzadinha_container {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(16, 40px);
-    grid-template-rows: repeat(28, 40px);
+    grid-template-columns: repeat(25, 40px);
+    grid-template-rows: repeat(20, 40px);
+}
+
+#ipt_resposta {
+    width: 300px;
+}
+
+.container_resposta {
+    border-top: solid 1px black;
+    
+}
+
+.resposta {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
 }
 
 .letra {
@@ -109,5 +141,6 @@ body {
     grid-row: 14;
     grid-column: 13;
 }
+
 
 
