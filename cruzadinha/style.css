@@ -33,11 +33,16 @@ body {
 
 #ipt_resposta {
     width: 300px;
+    height: 30px;
 }
 
 .container_resposta {
     border-top: solid 1px black;
-    
+}
+
+.container_resposta p {
+    padding: 0px 50px;
+    text-justify: justify;
 }
 
 .resposta {
