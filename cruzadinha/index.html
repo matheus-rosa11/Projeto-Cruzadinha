@@ -149,30 +149,65 @@
 </html>
 
 <script>
-
-    var itens = ['ula', 'registradores', 'eprom', 'quadcore', 'cpu', 'cs', 'ram', 'rom', 'dma', 'dualcore', 'databus', 'memoria', 'addressbus', 'flash', 'i5', 'i7']
-
+    var itens = [
+      "ula",
+      "registradores",
+      "eprom",
+      "quadcore",
+      "cpu",
+      "cs",
+      "ram",
+      "rom",
+      "dma",
+      "dualcore",
+      "databus",
+      "memoria",
+      "addressbus",
+      "flash",
+      "i5",
+      "i7",
+    ];
+  
+    var array = [
+      {
+        nome: "Gabriel",
+        idade: 22,
+      },
+      {
+        nome: "Joao",
+        idade: 23,
+      },
+      {
+        nome: "Matheus",
+        idade: 18,
+      },
+    ];
+  
+    console.log(itens.filter(v => v.length > 3));
+    //
+    array.map(v => console.log(v.nome, v.idade));
+  
     function responder() {
-
-        var resposta = ipt_resposta.value;
-
-        if (itens.includes(resposta)) {
-            
-        }
+      var resposta = ipt_resposta.value;
+      if (itens.includes(resposta)) {
+        fillFactory(resposta);
+      } else {
+        alert("essa palavra nao existe");
+      }
     }
-
-    var varUla = document.querySelector('.ula');
-
-    var nodeUla = varUla.querySelectorAll('input');
-
-    nodeUla.forEach((v, i) => {
-        console.log(v)
-
-        v[i] = 'u';
-    })
-
-    function identify() {
-        
+  
+    function fillFactory(resposta) {
+      var varUla = document.querySelector("." + resposta);
+      var nodeUla = varUla.querySelectorAll("input");
+      nodeUla.forEach((v, i) => {
+        console.log(i);
+        v.value = resposta[i];
+      });
     }
-
-</script>
+  
+    function identify() {}
+  
+    function main() {}
+  
+    main();
+  </script>
