@@ -134,13 +134,40 @@
                 </div>
 
                 <div class="container_resposta">
+                    <h2>Responda Aqui</h2>
                     <div class="resposta">
                         <input id="ipt_resposta" type="text">
                         <button onclick="responder()">Confirmar</button>
                         
                     </div>
-                    <p id="opt_dica">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsum deleniti nam ipsa architecto nostrum placeat itaque sed, nobis eveniet rerum explicabo velit? Animi blanditiis excepturi recusandae. Beatae obcaecati amet qui.</p>
+                    
                 </div>
+            </div>
+
+
+
+            </div>
+
+            <div class="palavras_certas">
+                <h1>DICAS</h1>
+                <p class="dica" id="dica1" style="display: block;"><strong>1.</strong> Circuito combinatório responsável pela execução de somas, subtrações e funções lógicas, em um sistema digital.</p>
+                <p class="dica" id="dica2"><strong>2. </strong>Circuitos digitais capazes de armazenar e deslocar informações binárias, e são tipicamente usados como um dispositivo de armazenamento temporário.</p>
+                <p class="dica" id="dica3"><strong>3. </strong>Memória não-volátil capaz de armazenar as informações para serem recuperadas e utilizadas posteriormente, mesmo depois de a alimentação ter sido interrompida.</p>
+                <p class="dica" id="dica4"><strong>4. </strong> Processador que pode executar até 4 threads por vez.</p>
+                <p class="dica" id="dica5"><strong>5. </strong>Trabalha informações binárias com base em instruções armazenadas em sua memória interna.</p>
+                <p class="dica" id="dica6"><strong>6. </strong>Entrada de controle de muitos circuitos integrados, como chips de memória, que permite ativar ou desativar o circuito.</p>
+                <p class="dica" id="dica7"><strong>7. </strong>Memória de curto prazo do computador. Armazenamento temporário que termina quando o aparelho é desligado da energia elétrica.</p>
+                <p class="dica" id="dica8"><strong>8. </strong>Memória que permite a gravação de dados uma única vez, não sendo possível apagar ou editar nenhuma informação.</p>
+                <p class="dica" id="dica9"><strong>9. </strong>Recurso da placa mãe que capacita os periféricos, como teclado e mouse, a terem acesso direto à memória RAM</p>
+                <p class="dica" id="dica10"><strong>10. </strong>Processador que pode executar até 2 threads por vez.</p>
+                <p class="dica" id="dica11"><strong>11. </strong>Via elétrica usada para transferir dados entre componentes de um computador.</p>
+                <p class="dica" id="dica12"><strong>12. </strong>Capacidade do computador armazenar e consultar informações.</p>
+                <p class="dica" id="dica13"><strong>13. </strong>Identifica a fonte ou origem dos dados.</p>
+                <p class="dica" id="dica14"><strong>14. </strong>Chip de memória de computador que mantém informações armazenadas sem a necessidade de uma fonte de energia.</p>
+                <p class="dica" id="dica15"><strong>15. </strong>Faz parte das séries de processadores para desktops e notebooks da Intel. O primeiro modelo foi lançado em setembro de 2009, como uma opção mais intermediária.</p>
+                <p class="dica" id="dica16"><strong>16. </strong>Faz parte das séries de processadores da Intel, tanto para desktop quanto para notebooks. Seu lançamento foi em 2008, buscando alto desempenho com foco em entusiasta e empresas.</p>
+
+                <h2>Bom jogo!</h2>
             </div>
         </div>
     </div>
@@ -167,6 +194,8 @@
       "i5",
       "i7",
     ];
+
+    var verdadeiro = false;
   
     // console.log(itens.filter(v => v.length > 3));
 
@@ -177,16 +206,20 @@
       if (itens.includes(resposta)) {
         fillFactory(resposta);
       } else {
-        alert("essa palavra nao existe");
+        alert("Essa palavra não existe");
       }
+
     }
   
     function fillFactory(resposta) {
-      var varUla = document.querySelector("." + resposta);
-      var nodeUla = varUla.querySelectorAll("input");
-      nodeUla.forEach((v, i) => {
-        console.log(i);
+      var palavra = document.querySelector("." + resposta);
+      var nodePalavra = palavra.querySelectorAll("input");
+      nodePalavra.forEach((v, i) => {
+        // console.log(i);
         v.value = resposta[i];
+        v.style.backgroundColor = 'rgb(161, 220, 161)';
+        console.log(v)
+        verdadeiro = true
       });
     }
   </script>
